@@ -1,0 +1,17 @@
+trigger:
+- '*'
+
+pool:
+  name: 'DebianBuildHost'
+
+steps:
+- task: Bash@3
+  displayName: 'Invoke wsjtx build shell script!'
+  inputs:
+    targetType: 'filePath'
+    filePath: build-v230rc1-wsjtx.sh
+
+- task: CmdLine@2
+  displayName: 'Invoke swsjtx build shell script using cmdline command and sh'
+  inputs:
+    script: sh build-v230rc1-wsjtx.sh
