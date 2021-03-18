@@ -9,9 +9,9 @@ steps:
   displayName: 'Invoke wsjtx build shell script!'
   inputs:
     targetType: 'filePath'
-    filePath: build-v230-wsjtx.sh 
+    filePath: build-v230-wsjtx.sh
 
 - task: CmdLine@2
-  displayName: 'Invoke swsjtx build shell script using cmdline command and sh'
+  displayName: 'Invoke wsjtx build shell script using cmdline command and sh'
   inputs:
     script: sh build-v230-wsjtx.sh 
